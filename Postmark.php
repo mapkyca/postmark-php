@@ -361,17 +361,16 @@ class Mail_Postmark
 			}
 		}
 		
-		if (($this->_debugMode & self::DEBUG_RETURN) === self::DEBUG_RETURN) {
-			return array(
-				'json' => json_encode($data),
-				'headers' => $headers,
-				'return' => $return,
-				'curlError' => $curlError,
-				'httpCode' => $httpCode
-			);
-		}
+		//if (($this->_debugMode & self::DEBUG_RETURN) === self::DEBUG_RETURN) {
+		return array(
+			'json' => json_encode($data),
+			'headers' => $headers,
+			'return' => $return,
+			'curlError' => $curlError,
+			'httpCode' => $httpCode
+		);
+		//}
 		
-		return true;
 	}
 	
 	/**
